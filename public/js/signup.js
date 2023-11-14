@@ -16,7 +16,7 @@ const signupFormHandler = async (event) => {
             headers: {'Content-Type': 'application/json'}
         });
         if (response.ok) {
-            alert('Account created! Logging you in now.');
+            alert('Account created! You are now logged in.');
             document.location.replace('/dashboard');
         } else {
             alert(response.statusText)
