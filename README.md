@@ -22,6 +22,9 @@ https://github.com/RVanVlietII/mytechblog1.git
 ## Heroku URL
 https://mytechblog1-053a7a9436c6.herokuapp.com/
 
+## ScreenShot
+<img width="1470" alt="Screenshot 2023-11-15 at 10 24 08 AM (2)" src="https://github.com/RVanVlietII/mytechblog1/assets/129308007/c97677d5-5e8b-4180-821a-6a8ade186704">
+
 
 
 ## Credit
