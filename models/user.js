@@ -1,3 +1,5 @@
+// User.js
+
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
@@ -16,9 +18,9 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    username: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     email: {
       type: DataTypes.STRING,
@@ -52,3 +54,12 @@ User.init(
 );
 
 module.exports = User;
+
+// Import Post model after User model definition
+const Post = require('./post');
+
+// Define the association with the Post model
+User.hasMany(Post, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE',
+});
