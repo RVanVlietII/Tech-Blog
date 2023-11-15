@@ -30,7 +30,7 @@ router.get('/', (req, res) => {
     .then(dbPostData => {
       const posts = dbPostData.map(post => post.get({ plain: true }));
       console.log('Rendering homepage view:', path.join(__dirname, 'views', 'homepage'));
-      res.render('homepage', {
+      res.render('partials/homepage', {
         posts,
         loggedIn: req.session.loggedIn
       });
