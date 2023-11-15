@@ -1,9 +1,7 @@
-
-
 // post.js
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-
+const User = require('./user'); // Import User model
 
 class Post extends Model {}
 
@@ -39,7 +37,4 @@ Post.init(
 );
 
 
-
 module.exports = Post;
-
-
