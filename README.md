@@ -22,7 +22,6 @@ https://github.com/RVanVlietII/mytechblog1.git
 ## Heroku URL
 https://mytechblog1-053a7a9436c6.herokuapp.com/
 
-## Walkthrough Video
 
 
 ## Credit
