@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
+const path = require('path');
 const { Post, User, Comment } = require('../models');
 
 router.get('/', (req, res) => {
@@ -28,6 +29,7 @@ router.get('/', (req, res) => {
     })
     .then(dbPostData => {
       const posts = dbPostData.map(post => post.get({ plain: true }));
+      console.log('Rendering homepage view:', path.join(__dirname, 'views', 'homepage'));
       res.render('homepage', {
         posts,
         loggedIn: req.session.loggedIn
@@ -71,7 +73,7 @@ router.get('/post/:id', (req, res) => {
           return;
         }
         const post = dbPostData.get({ plain: true });
-        res.render('single-post', {
+        res.render('post-info', {
             post,
             loggedIn: req.session.loggedIn
           });
